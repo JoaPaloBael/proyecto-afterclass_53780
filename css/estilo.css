@@ -34,7 +34,7 @@
     text-decoration: none;
 }
 
-h1 {
+.h1-index {
     background-color: red;
     color: white;
     font-family: sans-serif;
@@ -116,6 +116,38 @@ article {
     background-color: #ffffef;
 }
 
+/* ---------- EFEMERIDES---------- */
+
+.main-efemerides{
+    margin: auto;
+    padding: 0 10px;
+}
+.main-efemerides h1{
+    text-align: center;
+    display: none;
+}
+.main-efemerides h2{
+    text-align: center;
+}
+
+.grilla-efemerides{
+    margin: 20px auto;
+}
+
+.grilla-efemerides div{
+    display: flex;
+    justify-content: center;
+}
+.grilla-efemerides img{
+    max-width: 320px;
+}
+
+.video-iframe{
+    width: 300px;
+    margin: auto;
+    display: flex;
+}
+
 
 /* Estrategia Responsive = Mobile First = MIN WIDTH*/
 
@@ -124,6 +156,27 @@ article {
         width: 100vw;
         justify-content: center;
     }
+    .video-iframe{
+        width: 380px;
+        height: 350px;
+    }
+    
+}
+
+@media (min-width:480px ){
+    .grilla-efemerides{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 470px;
+        margin: 20px auto;
+    }
+    .grilla-efemerides img{
+        max-width: 140px;
+    }
+    .video-iframe{
+        width: 460px;
+    }
+
 }
 
 @media (min-width: 700px) {
@@ -133,5 +186,16 @@ article {
         grid-template-areas:
             "imagen-grande imagen-grande img-1 img-2"
             "imagen-grande imagen-grande img-3 img-4";
+    }
+    .video-iframe{
+        width: 680px;
+    }
+    .main-efemerides h1{
+        text-align: center;
+        display: block;
+    }
+    .main-efemerides h2{
+        text-align: center;
+        display: none;
     }
 }
